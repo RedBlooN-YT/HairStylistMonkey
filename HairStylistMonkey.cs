@@ -1,9 +1,10 @@
+using BTD_Mod_Helper;
 using BTD_Mod_Helper.Api.Towers;
 using BTD_Mod_Helper.Extensions;
+using HairStylistMonkey.Displays.Projectiles;
 using Il2CppAssets.Scripts.Models.Towers;
 using Il2CppAssets.Scripts.Models.TowerSets;
-using BTD_Mod_Helper;
-using HairStylistMonkey.Displays.Projectiles;
+
 
 namespace HairStylistMonkey;
 
@@ -23,19 +24,27 @@ public class HairStylistMonkey : ModTower
 
     public override string DisplayName => "Hair Stylist Monkey";
 
+    public override string Icon => "Icon";
+
+    public override string Portrait => "Icon";
+
     public override void ModifyBaseTowerModel(TowerModel towerModel)
     {
         var attackModel = towerModel.GetAttackModel();
         var weaponModel = towerModel.GetWeapon();
         var projectileModel = weaponModel.projectile;
-       // var projectile = attackModel.weapons[0].projectile;
-       // projectile.ApplyDisplay<ScissorsDisplay>();
+
+        var projectile = attackModel.weapons[0].projectile;
+        projectile.ApplyDisplay<ScissorsDisplay>();
+        //towerModel.ApplyDisplay<HairStylistMonkeyBaseDisplay>();
+
 
         // range
         towerModel.range = 27;
         towerModel.GetAttackModel().range = 27;
 
         // attck speed
+        
         weaponModel.rate = 1.04f;
 
         // Damage + pierce
@@ -44,7 +53,6 @@ public class HairStylistMonkey : ModTower
     }
 
     // Ultimate Crosspathing
-    public override bool IsValidCrosspath(int[] tiers) =>
-        ModHelper.HasMod("UltimateCrosspathing") || base.IsValidCrosspath(tiers);
+    public override bool IsValidCrosspath(int[] tiers) => ModHelper.HasMod("UltimateCrosspathing") || base.IsValidCrosspath(tiers);
 
 }
