@@ -20,6 +20,8 @@
     <img id="Downloads" height="90" src="https://img.shields.io/github/downloads/RedBlooN-YT/TowerScaler/total"></br>
     <br>ArtifactAndPerkEnabler:
     <img id="Downloads" height="90" src="https://img.shields.io/github/downloads/RedBlooN-YT/ArtifactAndPerkEnabler/total"></br>
+    <br>ChineseSkins:
+    <img id="Downloads" height="90" src="https://img.shields.io/github/downloads/RedBlooN-YT/BTD6ChineseSkins/total"></br>
     <br>InfinitePartyMembers:
     <img id="Downloads" height="90" src="https://img.shields.io/github/downloads/RedBlooN-YT/Infinite-Party-Members/total"></br>
   </div>
